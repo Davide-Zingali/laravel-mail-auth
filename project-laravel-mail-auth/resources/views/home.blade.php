@@ -14,7 +14,16 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <div>
+                        <form action="{{route('metodo-send')}}" method='post'>
+                            @csrf
+                            @method('post')
+                            <label for="testoMail">Inserisci del testo</label>
+                            <input type="text" name='testoMail'>
+
+                            <input type="submit" value='Invia'>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

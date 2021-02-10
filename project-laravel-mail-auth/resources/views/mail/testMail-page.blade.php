@@ -9,7 +9,10 @@
 <body>
     
     <div id="container">
-        <h1>Ciao Mondo</h1>
+        <h1>Testo ricevuto</h1>
+        <h2>
+            {{-- Ciao {{Auth::user() -> name}} --}}
+        </h2>
     </div>
 
 </body>
