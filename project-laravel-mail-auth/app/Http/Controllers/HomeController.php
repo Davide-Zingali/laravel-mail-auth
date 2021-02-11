@@ -27,10 +27,10 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function sendMail(request $request) {
+    public function sendMail(Request $request) {
 
         $mailUtenteCollegato = Auth::user() -> email;
-        
+       
         $dati = $request -> validate(
             [
                 'testoMail' => 'required'
@@ -38,7 +38,6 @@ class HomeController extends Controller
         );
 
         Mail::to($mailUtenteCollegato) -> send(new TestMail($dati['testoMail']));
-        // dd($dati);
         return redirect() -> back();
     }
 }

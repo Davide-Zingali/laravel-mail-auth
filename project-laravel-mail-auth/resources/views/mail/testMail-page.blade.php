@@ -9,9 +9,10 @@
 <body>
     
     <div id="container">
-        <h1>Testo ricevuto</h1>
         <h2>
-            {{-- Ciao {{Auth::user() -> name}} --}}
+            Ciao {{Auth::user() -> name}} - Testo richiesto:
+
+            {{$stringaTest}}
         </h2>
     </div>
 
